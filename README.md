@@ -1,36 +1,65 @@
 Multithreaded Web Crawler
-A Python-based web crawler that leverages the power of multithreading and web scraping to efficiently extract data from websites. This project allows you to crawl websites concurrently, improving speed and precision when gathering valuable information.
+=========================
+
+Overview
+--------
+This is a Python-based Multithreaded Web Crawler that efficiently fetches and parses web pages using multiple threads. It speeds up web scraping by making concurrent HTTP requests.
 
 Features
-Multithreading: Crawls multiple web pages at the same time for faster data extraction.
-Data Extraction: Extracts content from websites based on the given parameters (e.g., links, images, text).
-Efficient Crawling: Designed to handle large-scale web scraping tasks efficiently.
-Technologies Used
-Python: The core programming language used for development.
-Multithreading: For concurrent execution and faster crawling.
+--------
+- **Multithreading:** Fetch multiple pages concurrently.
+- **Efficient Data Extraction:** Extracts links, text, and other data.
+- **Customizable Depth:** Control how deep the crawler explores.
+- **Domain Handling:** Manages crawling across multiple domains.
+
 Installation
-Clone the repository:
+------------
+1. Clone the Repository:
+   git clone https://github.com/SANJAYSS-SRM-26/Multithreaded-Web-Crawler.git
+   cd Multithreaded-Web-Crawler
 
-bash
-Copy
-git clone https://github.com/SANJAYSS-SRM-26/Multithreaded-Web-Crawler.git
-Install Dependencies:
+2. Set Up a Virtual Environment:
+   python -m venv env
+   source env/bin/activate  (Windows: env\Scripts\activate)
 
-Make sure you have Python installed on your machine.
-Install required libraries:
-bash
-Copy
-pip install -r requirements.txt
-Run the Crawler:
+3. Install Dependencies:
+   pip install -r requirements.txt
 
-To start the web crawler, run:
-bash
-Copy
-python crawler.py
 Usage
-The web crawler can be configured to scrape specific sites by providing the URLs and setting the appropriate parameters (such as depth, output format).
-Contributions
-Feel free to fork the repository, raise issues, or submit pull requests to improve the project.
+-----
+1. Modify `config.py` to set:
+   - Start URL
+   - Crawl depth
+   - Number of threads
+
+2. Run the Crawler:
+   python crawler.py
+
+3. View Results:
+   - Output is saved in the `output/` directory.
+
+Project Structure
+-----------------
+Multithreaded-Web-Crawler/
+├── crawler.py           # Main crawler implementation
+├── config.py            # Configuration settings
+├── requirements.txt     # Python dependencies
+├── output/              # Directory for crawl results
+└── README.txt           # Project documentation
+
+Technologies Used
+-----------------
+- Python
+- Multithreading (threading module)
+- Requests (for HTTP requests)
+- BeautifulSoup (for HTML parsing)
+
+Contributing
+------------
+Contributions are welcome! Fork this repository, improve the crawler, and submit a pull request.
 
 License
-This project is open-source and available under the MIT License.
+-------
+This project is licensed under the MIT License.
+
+GitHub Repository: https://github.com/SANJAYSS-SRM-26/Multithreaded-Web-Crawler
